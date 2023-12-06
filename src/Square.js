@@ -1,9 +1,10 @@
 import React from 'react';
 
-function Square({ value, onSquareClick }) {
+function Square({ value, onSquareClick, isWinnerSquare }) {
     return (
-      <button className="square" onClick={onSquareClick}>
-        {value}
+      //if it's a winning square, add the winner attribute for CSS styling to highlight
+      <button className={`square ${isWinnerSquare ? 'winner' : ''}`} onClick={onSquareClick}>
+      {value}
       </button>
     );
   }
