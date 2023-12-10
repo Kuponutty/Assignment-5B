@@ -31,7 +31,7 @@ function Game() {
         resultText = '';
     }
     //time travel, jump to previous moves
-    const moves = history.map((move) => {
+    const moves = history.map((_, move) => {
       let description;
       if (move > 0) {
         description = 'Go to move #' + move;
